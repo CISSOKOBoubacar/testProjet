@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title> Qr Code </title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css">
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
+        integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+    <link rel="stylesheet" href="{{ url_for('static', path='/css/qrcode.css')}}">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        a:link {
+            color: #519838;
+            text-decoration: none;
+        }
+        .findme{
+            text-align: center !important;
+        }
+        .fafindme {
+            color: #ffffff !important;
+            text-decoration: none;
+        } 
+    </style>
+    
+</head>
+
+<body>
+    <div class="container"  style="margin-top: 2%;">
+        <div class="row">
+            <div class="col-sm-10 col-md-8 col-lg-6 mx-auto">
+                
+                
+                    <div class="card">
+                        <div class="card-body">
+
+                            <div class="m-sm-4 findme">
+                                <img src="{{ url_for('static', path='/images/rsz_logo_white.png')}}" alt="logo">
+                                <div class="row">
+                                    <div class="col-sm-12">
+                                        
+                                        <div class="bg-light border mt-2">
+                                            <h2 style="text-align: center !important;">{{ adresse_complete }}
+                                                {{ country }}</h2>
+                                        </div>
+                                    </div>
+                                    <br>
+
+                                    <div class="col-sm-12 mt-5">
+                                        <!--  <a href="login.html">-->
+                                        <a href="https://houseinfos{{ env }}-gevxguoisq-ew.a.run.app/register/{{ country_alias }}/{{ aid }}"> 
+                                            <input class="btn btn-success" type="submit"
+                                                value="Se rattacher à cette adresse"
+                                                style=" font-size: 1em ;border-radius:20px; padding:5px;width: auto;"></i></a>
+                                    </div>
+
+                                </div>
+                            </div>
+                            
+                            <div class="row mt-2 text-center">
+                                
+                                <div class="col-sm-6">
+                                    <a href="https://www.google.com/maps/dir/?api=1&destination={{ la }},{{ lo }}">
+
+                                        <button type="button"
+                                            style=" font-size: 1em;border: 1px solid green ;border-radius:20px ; padding:5px;">
+                                            <span class="glyphicon glyphicon-map-marker"></span><br> Aller à cette
+                                            Adresse 
+                                        </button>
+                                    </a>
+                                </div>
+
+                                <div class="col-sm-6">
+                                    <a href="https://houseinfos{{ env }}-gevxguoisq-ew.a.run.app/share/{{ country_alias }}/{{ aid }}">
+                                        <button type="button" 
+                                            style=" font-size: 1em ;border: 1px solid green;border-radius:20px; padding:5px;">
+                                            <span class="bi bi-share-fill green-color"></span><br>Partager cette
+                                            Adresse
+                                        </button>
+                                    </a>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="m-sm-4 findme">
+                            
+                            <h4 style="font-size: 1em"> Téléchargez
+                                l'application en cliquant sur <br><br> <a
+                                    href="http://onelink.to/twu4m9"><input
+                                        class="btn btn-primary" value="Télécharger"
+                                        style=" font-size: 1em;padding:5px;width: 100px;"></a>
+                            </h4>
+
+                        </div>
+
+
+                        <div class="row findme">
+                                
+                            <div class="col-sm-5">
+                                <h4>Nous contacter</h4>
+                                    <a style='color:rgb(71, 119, 3)' href=""> <i class='fa fa-whatsapp'></i>76 450 00 10
+                                         <i class='fa fa-whatsapp'></i>76 450 00 07</a> 
+                                        
+                                        <!-- <i class='fa fa-whatsapp'></i>76 450 00 10</a> 76 450 00 07 <br>  -->
+
+                            </div>
+
+                            <div class="col-sm-7">
+                                <h4>Nos réseaux </h4>
+
+                                <div class="buttons">
+                                                                    
+                                    <!-- Add font awesome icons -->
+                                    <!-- Facebook -->
+                                    <a href="https://www.facebook.com/FindMe.ComeToMyHouse" class="fa fa-facebook fafindme" role="button"></a>
+                                    <!-- linkedin -->
+                                    <a href="https://www.linkedin.com/company/findme-house/" class="fa fa-linkedin fafindme" role="button"></a>
+                                    <!-- Instagram -->
+                                    <a href="https://www.instagram.com/findme.house/?hl=fr" class="fa fa-instagram fafindme" role="button"></a>
+
+                                    <!-- Twitter -->
+                                    <a  href="https://twitter.com/FindMe_house" class="fa fa-twitter fafindme" role="button"></a>
+
+                                </div> 
+                            </div>
+
+                        </div>
+
+
+                        <div class="row findme mb-5">
+                                
+                            <div class="col-sm-7">
+                                <h2 class="font-weight-bold" style="font-size: 1em;margin-right: 10px; color: #1665AE;">FindMe soutenue par</h2>
+                            </div>
+
+                            <div class="col-sm-5">
+                                <img class="img-fluid" src="{{ url_for('static', path='/images/logo_poste_sen.jpg') }}" alt="logo"
+                                style=" width: auto; height: 55px; margin-left: 10px;">
+                            </div>
+
+                        </div>
+
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+       
+</body>
+
+</html>
